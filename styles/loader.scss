@@ -1,0 +1,90 @@
+@import 'modules/variables';
+@import 'modules/mixin';
+
+.pace-done #global-container {
+  transition: opacity 1s;
+  opacity: 1;
+}
+
+#global-container {
+  opacity: 0;
+}
+
+.pace {
+  z-index: 2000;
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100px;
+  height: 100px;
+}
+
+.pace .pace-progress {
+  transform: none !important;
+  text-align: center;
+}
+
+.pace .pace-progress::after {
+  content: attr(data-progress-text);
+  position: absolute;
+  top: 50px;
+  left: 45px;
+  margin: auto;
+  right: 0;
+  bottom: 0;
+  display: block;
+  font-weight: 100;
+  font-size: 2em;
+  font-family: 'Helvetica Neue', 'Yu Gothic', 'Meiryo', sans-serif;
+  color: $cSubTitle;
+}
+
+.pace.pace-inactive {
+  display: none;
+}
+.pace-progress-inner {
+  position: relative;
+  margin: auto;
+  height: 150px;
+  width: 150px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: $cBlue transparent transparent;
+  border-radius: 50%;
+  -webkit-animation: spin 1s linear infinite;
+  -moz-animation: spin 1s linear infinite;
+  -o-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+@-webkit-keyframes spin {
+  100% { -webkit-transform: rotate(359deg); }
+}
+
+@-moz-keyframes spin {
+  100% { -moz-transform: rotate(359deg); }
+}
+
+@-o-keyframes spin {
+  100% { -moz-transform: rotate(359deg); }
+}
+
+@keyframes spin {
+  100% {  transform: rotate(359deg); }
+}
+
+@media (max-width: 600px) {
+  .pace-progress-inner {
+    width: 50px;
+    height: 50px;
+    border-width: 8px;
+    position: static;
+  }
+
+  .pace .pace-progress::after {
+    margin-top: 24px;
+    position: static;
+  }
+}

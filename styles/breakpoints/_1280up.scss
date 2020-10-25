@@ -1,0 +1,40 @@
+/******************************************************************
+
+Stylesheet: 1280px以上のモニタで適用
+
+******************************************************************/
+
+.pace-done
+& .typ {
+  font-size: 72px;
+}
+
+.hero {
+  background-position: 30%;
+  }
+  .aboutme {
+  &__inner {
+    padding: 50px 150px;
+  }
+}
+.popular {
+  &__item {
+    flex-basis: 23%;
+  }
+}
+.side {
+  display: block;
+}
+
+.skill {
+  &__item {
+    margin: 0 50px 50px 0;
+    width: calc(33.3333333% - 34px);
+    &:nth-child(2n){
+      margin-right: 50px;
+    }
+    &:nth-child(3n){
+      margin-right: 0;
+    }
+  }
+}

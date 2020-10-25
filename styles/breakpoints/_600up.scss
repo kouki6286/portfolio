@@ -1,0 +1,143 @@
+/******************************************************************
+
+Stylesheet: 600px以上のタブレットやモニタで適用
+
+******************************************************************/
+.pl-sm{
+  padding-left: 50px;
+}
+.pr-sm{
+  padding-right: 50px;
+}
+
+.flex {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.hero {
+    background-position: 45%;
+}
+.top {
+    margin-left: 80px;
+}
+
+.pace-done{
+    & .typ {
+        font-size: 48px;
+    }
+}
+
+.aboutme {
+    &__inner {
+        padding: 50px;
+    }
+    &__texts,
+    &__img {
+        flex-basis: 47%;
+        height: 320px;
+    }
+
+    &__texts {
+        display: flex;
+        align-items: flex-end;
+    }
+    &__description {
+        & h3 {
+            margin-bottom: 32px;
+        }
+    }
+}
+.skill {
+  &__item {
+    margin: 0 30px 30px 0;
+    width: calc(50% - 30px / 2);
+    &:nth-child(2n){
+      margin-right: 0;
+    }
+  }
+}
+.works {
+    &__inner{
+    padding: 24px 50px;
+  }
+  &__item{
+    margin-bottom: 50px;
+    &:nth-child(3){
+      margin-bottom: 0;
+    }
+    }
+}
+
+.footer {
+    & .logo {
+        justify-content: flex-start;
+    }
+
+    &__li {
+        margin-left: 0;
+        margin-right: 30px;
+    }
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+}
+.submit {
+  width: 300px;
+  margin: 0 auto;
+}
+.header {
+  height: 100px;
+  &__nav {
+    font-size: 0.8em;
+    display: block;
+    & a {
+        &:hover {
+            color: $cOrange;
+        }
+    }
+}
+  & .logo {
+    &__img {
+        width: 50px;
+        height: 50px;
+        margin-top: 14px;
+    }
+    &__text {
+        font-size: 18px;
+    }
+  }
+}
+.mobile-menu {
+    display: none;
+    &__btn {
+        display: none;
+    }
+}
+.flex {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.footer {
+    &__inner {
+        justify-content: space-between;
+    }
+    & .logo {
+        justify-content: flex-start;
+        &__text {
+            font-size: 18px;
+            padding-bottom: 0;
+            margin-top: 14px;
+            & br {
+                display: none;
+            }
+        }
+    }
+
+    &__li {
+        margin-left: 0;
+        margin-right: 30px;
+    }
+}

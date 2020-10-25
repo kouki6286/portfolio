@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/******************************************************************
+
+Stylesheet: 1280px以上のモニタで適用
+
+******************************************************************/
+.aboutme__inner {
+  padding: 50px 150px;
+}
+
+.popular__item {
+  flex-basis: 23%;
+}
+
+.side {
+  display: block;
+}
+
+.skill__item {
+  margin: 0 50px 50px 0;
+  width: calc(33.3333333% - 34px);
+}
+
+.skill__item:nth-child(2n) {
+  margin-right: 50px;
+}
+
+.skill__item:nth-child(3n) {
+  margin-right: 0;
+}
